@@ -4,11 +4,13 @@ function About() {
     return (
         <div
             id="about"
-            className="mt-28 flex w-full flex-col items-center justify-center p-4 text-white lg:mt-64 lg:flex-row lg:px-[120px]"
+            className="mt-28 flex w-full flex-col items-center justify-center px-4 text-white lg:mt-64 lg:flex-row lg:px-[120px]"
         >
             <div className="mr-0 mb-6 lg:mb-0 lg:mr-24 lg:w-1/2">
-                <h1 className="mb-7 uppercase lg:mb-5">About us</h1>
-                <p className=" text-sm font-medium leading-6 tracking-wide text-white lg:text-lg lg:leading-9">
+                <h1 className="mb-7 text-2xl font-bold uppercase leading-8 lg:mb-5 lg:text-[40px]">
+                    About us
+                </h1>
+                <p className="text-sm font-medium leading-6 tracking-wide text-[#A9B1BD] lg:text-lg lg:leading-9">
                     We are comprised of expert security advisors,
                     cryptographers, researchers, engineers, scientists and
                     outstanding blockchain practitioners, We work with companies
