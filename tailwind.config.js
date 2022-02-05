@@ -11,6 +11,9 @@ module.exports = {
             fontFamily: {
                 red: "'Red Hat Display', sans-serif",
             },
+            backgroundImage: {
+                city: "url('./img/mainBg.png')",
+            },
         },
     },
     plugins: [],

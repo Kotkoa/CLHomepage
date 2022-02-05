@@ -4,7 +4,7 @@ import cross from './img/cross.svg'
 
 export default function MenuDropdown({ tabs }) {
     return (
-        <Menu as="div" className="relative inline-block text-left">
+        <Menu as="div" className="relative inline-block text-left lg:hidden">
             {({ open }) => (
                 <>
                     <Menu.Button className="flex h-8 w-8 items-center justify-center bg-gradient-to-b from-[#C73C45] to-[#A9222A] py-2.5 px-2">
@@ -19,8 +19,8 @@ export default function MenuDropdown({ tabs }) {
                         leaveFrom="transform scale-100 opacity-100"
                         leaveTo="transform scale-95 opacity-0"
                     >
-                        <Menu.Items className="absolute -right-4 z-30 mt-9 w-screen  origin-top-right pl-8">
-                            <div className="flex flex-col border border-[#7B5151] bg-[#3f0404] p-4 pb-0">
+                        <Menu.Items className="absolute -right-4 z-30 mt-9 w-screen origin-top-right pl-12">
+                            <div className="flex flex-col border border-[#7B5151] bg-[#3F0404] bg-opacity-100 p-4 pb-0 opacity-100">
                                 {tabs.map((item) => {
                                     return (
                                         <Menu.Item key={item}>
@@ -31,7 +31,7 @@ export default function MenuDropdown({ tabs }) {
                                                             ? ' font-bold '
                                                             : ' font-medium'
                                                     }`}
-                                                    href="/"
+                                                    href={`#${item}`}
                                                 >
                                                     {item}
                                                 </a>
