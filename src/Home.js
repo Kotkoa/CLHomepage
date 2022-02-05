@@ -3,7 +3,7 @@ import React from 'react'
 const Home = () => {
     return (
         <div className="absolute top-[269px] flex w-screen flex-col items-center">
-            <h1 className="mx-52 max-w-[1074px] text-[56px] font-bold text-white">
+            <h1 className="mx-52 max-w-[1074px] text-4xl md:text-[56px] font-bold text-white">
                 Republic of Palau and Cryptic Labs Launch the World’s First Web3
                 Digital Resident ID Card
             </h1>

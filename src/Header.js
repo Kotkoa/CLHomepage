@@ -1,23 +1,25 @@
-import logo from './crypticlabs.svg'
+import logo from './img/crypticlabs.svg'
+import MenuDropdown from './MenuDropdown'
 
-const tabs = ['home', 'about', 'focus', 'leadership', 'contact us']
-
-const Header = () => {
+const Header = ({ tabs }) => {
     return (
         <div className="absolute top-0 left-0 flex w-full justify-center">
-            <div className="header nax-w-[1200px] mx-28 mt-6 flex w-full items-center justify-between border border-[#7B5151] bg-[#3f0404] opacity-70">
+            <div className="header mx-4 mt-4 flex w-full max-w-[1200px] items-center justify-between border border-[#7B5151] bg-[#3f0404] pl-4 pr-4 opacity-70 lg:mx-28 lg:mt-6 lg:pl-10 lg:pr-10">
                 <img
                     src={logo}
                     alt="cryptic labs logo"
-                    className="my-7 ml-10 mr-10"
+                    className="my-7 mr-10 w-20 lg:w-[109px]"
                 />
-                <div className="">
+                <div className="lg:hidden">
+                    <MenuDropdown tabs={tabs} />
+                </div>
+                <div className="hidden text-right lg:block">
                     {tabs.map((tab) => {
                         return (
                             <a
-                                href="#"
+                                href="/"
                                 key={tab}
-                                className="mr-16 uppercase text-white"
+                                className="mr-16 whitespace-nowrap uppercase text-white"
                             >
                                 {tab}
                             </a>
