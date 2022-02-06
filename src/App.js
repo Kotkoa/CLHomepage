@@ -4,6 +4,7 @@ import Home from './Home'
 import Focus from './Focus'
 import Contact from './Contact'
 import Leadership from './Leadership'
+import Footer from './Footer'
 
 const tabs = ['home', 'about', 'focus', 'leadership', 'contact']
 
@@ -26,6 +27,7 @@ function App() {
                 <Focus />
                 <Leadership />
                 <Contact />
+                <Footer />
             </div>
         </div>
     )
