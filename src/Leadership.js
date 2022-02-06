@@ -75,7 +75,7 @@ function Leadership() {
     return (
         <div id="leadership" className="p-4 text-white lg:px-[120px]">
             <div className="mt-32 flex flex-col items-start lg:mt-44  lg:items-center">
-                <h1 className="mb-3 text-2xl font-bold uppercase leading-8 lg:mb-7 lg:text-[40px]">
+                <h1 className="mb-3 text-2xl font-bold uppercase leading-8 lg:mb-20 lg:text-[40px]">
                     Expert team
                 </h1>
             </div>
