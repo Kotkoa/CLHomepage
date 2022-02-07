@@ -1,6 +1,20 @@
 import email from './img/email.svg'
+import { useFormik } from 'formik'
+import validate from './utils/validate'
 
 function Contact() {
+    const formik = useFormik({
+        initialValues: {
+            name: '',
+            email: '',
+            message: '',
+        },
+        validate,
+        onSubmit: (values) => {
+            alert(JSON.stringify(values, null, 2))
+        },
+    })
+
     return (
         <div
             id="contact"
@@ -17,7 +31,10 @@ function Contact() {
                     </p>
                 </div>
             </div>
-            <form className="mt-11 mb-20 flex w-full max-w-[662px] flex-col self-center border border-white border-opacity-5 bg-[#2A0808] px-5 pt-2.5 pb-6 lg:mt-0 lg:w-5/12">
+            <form
+                className="mt-11 mb-20 flex w-full max-w-[662px] flex-col self-center border border-white border-opacity-5 bg-[#2A0808] px-5 pt-2.5 pb-6 lg:mt-0 lg:w-5/12"
+                onSubmit={formik.handleSubmit}
+            >
                 <label
                     for="name"
                     className="mt-6 mb-3 text-sm font-medium uppercase tracking-widest"
@@ -29,8 +46,15 @@ function Contact() {
                     id="name"
                     name="name"
                     placeholder="Full name"
+                    onChange={formik.handleChange}
+                    value={formik.values.name}
                     className="border border-[#6A5353] bg-transparent px-5 py-3.5 placeholder:text-sm placeholder:font-medium placeholder:tracking-widest placeholder:text-white"
                 />
+                {formik.errors.name ? (
+                    <div className="text-sm text-red-400">
+                        {formik.errors.name}
+                    </div>
+                ) : null}
 
                 <label
                     for="email"
@@ -43,8 +67,15 @@ function Contact() {
                     id="email"
                     name="email"
                     placeholder="example@youremail.com"
+                    onChange={formik.handleChange}
+                    value={formik.values.email}
                     className="border border-[#6A5353] bg-transparent px-5 py-3.5 placeholder:text-sm placeholder:font-medium placeholder:tracking-widest placeholder:text-white"
                 />
+                {formik.errors.email ? (
+                    <div className="text-sm text-red-400">
+                        {formik.errors.email}
+                    </div>
+                ) : null}
 
                 <label
                     for="message"
@@ -56,13 +87,20 @@ function Contact() {
                     id="message"
                     name="message"
                     placeholder="Send us a message"
+                    onChange={formik.handleChange}
+                    value={formik.values.message}
                     className="border border-[#6A5353] bg-transparent px-5 py-3.5 placeholder:text-sm placeholder:font-medium placeholder:tracking-widest placeholder:text-white"
                 ></textarea>
+                {formik.errors.message ? (
+                    <div className="text-sm text-red-400">
+                        {formik.errors.message}
+                    </div>
+                ) : null}
 
                 <input
                     type="submit"
                     value="Send Message"
-                    className="mt-10 w-full bg-gradient-to-b from-[#C73C45] to-[#A9222A] py-4 text-center text-base font-bold tracking-wider text-white sm:w-56 sm:py-6 sm:px-8 sm:text-xl sm:uppercase"
+                    className="mt-10 w-full bg-gradient-to-b from-[#C73C45] to-[#A9222A] py-4 text-center text-base font-bold tracking-wider text-white hover:cursor-pointer sm:w-56 sm:py-6 sm:px-8 sm:text-xl sm:uppercase"
                 />
             </form>
         </div>
