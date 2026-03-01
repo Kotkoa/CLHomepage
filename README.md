@@ -2,6 +2,8 @@
 
 Corporate homepage for **Aurelius Trust Labs** — a strategic research and advisory firm focused on distributed systems, applied cryptography, digital identity, and economic trust architectures.
 
+**Live:** https://kotkoa.github.io/CLHomepage/
+
 ## Tech Stack
 
 - **React 18** — UI framework
@@ -58,9 +60,9 @@ Build output goes to `dist/`.
 
 ## Deployment
 
-Designed for static hosting (Vercel, Netlify, etc).
+Deployed automatically to GitHub Pages via GitHub Actions on push to `main`.
 
-For Vercel: connect the repository — Vite framework will be auto-detected. Build command: `npm run build`, output directory: `dist`.
+Build command: `npm run build`, output directory: `dist`.
 
 ## Formatting
 
