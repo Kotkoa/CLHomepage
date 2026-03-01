@@ -1,70 +1,71 @@
-# Getting Started with Create React App
+# Aurelius Trust Labs
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Corporate homepage for **Aurelius Trust Labs** — a strategic research and advisory firm focused on distributed systems, applied cryptography, digital identity, and economic trust architectures.
 
-## Available Scripts
+## Tech Stack
 
-In the project directory, you can run:
+- **React 18** — UI framework
+- **Vite 6** — build tool and dev server
+- **Tailwind CSS 4** — utility-first CSS with native Vite plugin
+- **Headless UI 2** — accessible UI primitives (mobile menu)
 
-### `yarn start`
+## Getting Started
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Prerequisites
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- Node.js >= 20 (see `.nvmrc`)
 
-### `yarn test`
+### Install & Run
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```bash
+npm install
+npm run dev
+```
 
-### `yarn build`
+Open [http://localhost:5173](http://localhost:5173) in your browser.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Production Build
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```bash
+npm run build
+npm run preview
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Build output goes to `dist/`.
 
-### `yarn eject`
+## Project Structure
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```
+├── index.html              Entry point
+├── vite.config.js          Vite configuration
+├── public/                 Static assets (photos, images)
+└── src/
+    ├── index.jsx           React root (createRoot)
+    ├── index.css           Tailwind imports and theme
+    ├── App.jsx             Main layout and routing
+    ├── Header.jsx          Navigation bar with logo
+    ├── MenuDropdown.jsx    Mobile hamburger menu
+    ├── Home.jsx            Hero section
+    ├── About.jsx           About the company
+    ├── Focus.jsx           Services and focus areas
+    ├── Leadership.jsx      Expert team profiles
+    ├── Contact.jsx         Contact form with validation
+    ├── Footer.jsx          Copyright footer
+    ├── img/                SVG icons and logo
+    └── utils/
+        └── validate.js     Form validation
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Deployment
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Designed for static hosting (Vercel, Netlify, etc).
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+For Vercel: connect the repository — Vite framework will be auto-detected. Build command: `npm run build`, output directory: `dist`.
 
-## Learn More
+## Formatting
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```bash
+npx prettier --write .
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Uses Prettier 3 with `prettier-plugin-tailwindcss` for automatic class sorting.
