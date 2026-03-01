@@ -14,7 +14,7 @@ function App() {
       <div className="max-w-screen-1xl container xl:mx-auto">
         <div
           className="landing bg-auto bg-bottom bg-no-repeat"
-          style={{ backgroundImage: "url('/img/mainBg.webp')" }}
+          style={{ backgroundImage: `url('${import.meta.env.BASE_URL}img/mainBg.webp')` }}
         >
           <Header tabs={tabs} />
           <Home />

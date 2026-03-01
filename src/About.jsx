@@ -25,7 +25,7 @@ function About() {
         </p>
       </div>
       <div className="max-w-137.5 lg:w-5/12">
-        <img src="/workprogress.jpg" alt="work process" />
+        <img src={`${import.meta.env.BASE_URL}workprogress.jpg`} alt="work process" />
       </div>
     </div>
   )
